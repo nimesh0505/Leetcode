@@ -50,5 +50,4 @@ class Solution:
                     index_.append(j)
             if sum(sub_array) == target:
                 return index_
-
-        
+   
