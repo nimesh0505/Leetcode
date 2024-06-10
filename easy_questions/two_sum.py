@@ -32,7 +32,7 @@ Only one valid answer exists.
 
 # Solution 1:
 """
-Time Complexity: O(n^2)
+Time Complexity: O(n)
 """
 from typing import List
 
