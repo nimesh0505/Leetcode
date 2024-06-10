@@ -39,15 +39,12 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            sub_array = []
-            index_ = []
-            for j in range(i,len(nums)):
-                if nums[j]> target:
-                    pass
-                else:
-                    sub_array.append(nums[j])
-                    index_.append(j)
-            if sum(sub_array) == target:
-                return index_
+        num_dict = {}
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in num_dict:
+                return [num_dict[complement], i]
+            num_dict[num] = i
+        return []
+        
    
